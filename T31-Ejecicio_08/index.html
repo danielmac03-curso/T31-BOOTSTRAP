@@ -1,0 +1,116 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="estilos.css">
+        <script src="codigo.js"></script>
+        <meta charset="UTF-8">
+      
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+       <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">     -->
+        <title>Ejercicio 14</title>
+    </head>
+    <body class="bg-info">
+
+        <div class="container mt-5">
+            <div class="col-4 container" id="contenedor">
+                <div class="row bg-white">
+                    <input type="text" id="resul">
+                    <br>
+                    <input type="text" id="texto">
+                </div>
+
+                <div class="row">
+                    <div class="col bg-secondary container">
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="9">9</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="6">6</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="3">3</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="punto()" id=".">.</button>
+                        </div>
+                    </div>
+                    <div class="col bg-secondary container">
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="8">8</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="5">5</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="2">2</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="0">0</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                    </div>
+                    <div class="col bg-secondary container">
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="7">7</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="4">4</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="1">1</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                        <div class="row panel pt-3 pl-4">
+                            <button type="button" class="btn btn-secondary" onclick="num(this.id)" id="00">00</button>
+                        </div>
+                        <div class="row panel pt-4 pl-4"></div>
+                    </div>
+                    <div class="col bg-info container">
+                        <div class="row panel pt-3 pl-4"></div>
+                        <div class="row pl-4">
+                            <button type="button" class="btn btn-info" id="borrar" onclick="c()" id="c">DEL</button>
+                        </div>
+                        <div class="row panel pt-3 pl-4"></div>
+                        <div class="row pl-4">
+                            <button type="button" class="btn btn-info" onclick="op(this.id)" id="/">/</button>
+                        </div>
+                        <div class="row panel pt-3 pl-4"></div>
+                        <div class="row pl-4">
+                            <button type="button" class="btn btn-info" onclick="op(this.id)" id="*">X</button>
+                        </div>
+                        <div class="row panel pt-3 pl-4"></div>
+                        <div class="row pl-4">
+                            <button type="button" class="btn btn-info" onclick="op(this.id)" id="-">-</button>
+                        </div>
+                        <div class="row panel pt-3 pl-4"></div>
+                        <div class="row pl-4">
+                            <button type="button" class="btn btn-info" onclick="op(this.id)" id="+">+</button>
+                        </div>
+                        <div class="row panel pt-3 pl-4"></div>
+                        <div class="row pl-4">
+                            <button type="button" class="btn btn-info" onclick="resultado()" id="=">=</button>
+                        </div>
+                        <div class="row panel pt-3 pl-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
